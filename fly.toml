@@ -8,6 +8,11 @@ app = 'supabase-grafana-metrics'
 [[mounts]]
   source = 'supabase_metrics_data'
   destination = '/data'
+  initial_size = "1GB"
+  auto_extend_size_threshold = 80
+  auto_extend_size_increment = "1GB"
+  auto_extend_size_limit = "10GB"
+
 
 [http_service]
   internal_port = 8080
